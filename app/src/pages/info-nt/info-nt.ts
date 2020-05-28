@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { Student } from '../../model/student';
+import { Family } from '../../model/family';
 import { UpdateNtPage } from '../update-nt/update-nt';
 
 
@@ -11,12 +11,12 @@ import { UpdateNtPage } from '../update-nt/update-nt';
   templateUrl: 'info-nt.html',
 })
 export class InfoNtPage {
-  student: Student;
+  family: Family;
   updatePage: any = UpdateNtPage;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
-    this.student = new Student('1610193','Na','1610193@dlu.edu.vn','17/01/1998','251009677', 'Không', 'Không','143','Việt Nam', 'vvsv','ssgs','Kinh','Lâm Đồng','Đà Lạt', 'Nữ', '0326147171','K40','','','','','12/04/2014','Lâm Đồng','Đà Lạt','K40','CTK40','1610193');
-  
+    //this.family = new Student('1610193','Na','1610193@dlu.edu.vn','17/01/1998','251009677', 'Không', 'Không','143','Việt Nam', 'vvsv','ssgs','Kinh','Lâm Đồng','Đà Lạt', 'Nữ', '0326147171','K40','','','','','12/04/2014','Lâm Đồng','Đà Lạt','K40','CTK40','1610193');
+
   }
 
   ionViewDidLoad() {

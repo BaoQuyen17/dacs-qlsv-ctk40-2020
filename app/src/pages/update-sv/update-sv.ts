@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { Student } from '../../model/student';
+import { Detail } from '../../model/detail';
 import { Province } from '../../model/province';
 import { District } from '../../model/district';
 import { LocationProvider } from '../../providers/location-provider';
@@ -20,9 +20,9 @@ export class UpdateSvPage {
   cities:Province[];
   districts: District[] = [];
   locationProvider: LocationProvider;
+  detail: Detail;
 
    constructor(public navCtrl: NavController, public navParams: NavParams, locationProvider: LocationProvider) {
-    this.student = new Student('1610193','Na','1610193@dly.edu.vn','17/01/1998','251009677', 'Không', 'Không','143','Việt Nam', 'vvsv','ssgs','Kinh','Lâm Đồng','Đà Lạt', 'Nữ', '0326147171','K40','','','','','12/04/2014','Lâm Đồng','Đà Lạt','K40','CTK40','1610193');
     this.locationProvider = locationProvider;
     locationProvider.getAllCityOffVietNam().then(
       data =>{
@@ -30,14 +30,8 @@ export class UpdateSvPage {
       }
     );
   } 
-  
-  student: Student;
 
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad InfoSvPage');
-  }
-  
   findProvinceIdFormName(name: string):Province{
   
     let pro: Province;

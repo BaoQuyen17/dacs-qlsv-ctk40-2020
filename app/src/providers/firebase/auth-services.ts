@@ -18,7 +18,11 @@ export class AuthService{
     doLogin(id: string, password: string){
         return new Promise<any>((resolve, inject)=>{
             firebase.auth().signInWithEmailAndPassword(id,password).then(
-                res => resolve(res),
+                res => {
+                    let uid = res.user.uid;
+                    console.log("uid form auth service: "+uid);
+                    resolve(uid);
+                },
                 err => inject(err)
             )
         })

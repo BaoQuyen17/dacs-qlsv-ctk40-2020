@@ -19,6 +19,9 @@ import { HistoryPage } from '../pages/history/history';
 import {AuthService} from '../providers/firebase/auth-services';
 import {AngularFireModule} from '@angular/fire';
 import { AngularFireAuth } from '@angular/fire/auth';
+import { StudentService } from '../providers/firebase/student-services';
+import { AngularFirestore } from 'angularfire2/firestore';
+import { StudentSingleton } from '../providers/student-singleton';
 
 
 const enviroment = {
@@ -72,6 +75,9 @@ const enviroment = {
     LocationProvider,
     AuthService,
     AngularFireAuth,
+    StudentService,
+    AngularFirestore,
+    StudentSingleton,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
   ]
 })

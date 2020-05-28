@@ -1,12 +1,15 @@
 page-info-sv {
     align-content: center;
+    ion-content{
+        background-color: #b1b1b1;
+    }
 
     .row-item{
         
         //background-color: #d4f3ef;
         width: 100%;
         display: flex;
-        background-color: green;
+        background-color: #b1b1b1;
         color: white;
 
     }
@@ -36,6 +39,8 @@ page-info-sv {
         display: flex;
         background-color: #cad459;
         color: black;
+        margin-top: 5px;
+        margin-bottom: 5px;
       }
 
       .main-button{

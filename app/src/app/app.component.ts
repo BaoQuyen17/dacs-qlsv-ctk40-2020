@@ -6,6 +6,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { LocationProvider } from '../providers/location-provider';
 import { LoginPage } from '../pages/login/login';
 import { AuthService } from '../providers/firebase/auth-services';
+import { StudentService } from '../providers/firebase/student-services';
 
 @Component({
   templateUrl: 'app.html'
@@ -13,12 +14,13 @@ import { AuthService } from '../providers/firebase/auth-services';
 export class MyApp {
   rootPage:any = LoginPage;
 
-  constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen, locationProvider: LocationProvider, authService: AuthService) {
+  constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen, locationProvider: LocationProvider, authService: AuthService, studentService: StudentService) {
     platform.ready().then(() => {
       statusBar.styleDefault();
       splashScreen.hide();
       locationProvider.getAllCityOffVietNam();
       authService.start();
+      studentService.start();
     });
   }
 }
