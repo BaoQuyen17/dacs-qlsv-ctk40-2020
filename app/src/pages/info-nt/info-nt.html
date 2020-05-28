@@ -1,0 +1,34 @@
+
+<ion-header>
+  <ion-navbar>
+    <ion-title>Thông tin người thân</ion-title>
+  </ion-navbar>
+</ion-header>
+
+ 
+<ion-content>
+  <ion-list>
+    <ion-item class="row-item">
+      <ion-label class="title">Họ tên: </ion-label>
+      <ion-input class="info" placeholder="{{student.fullname}}"></ion-input>
+    </ion-item>
+
+    <ion-item class="row-item">
+      <ion-label class="title">Điện thoại: </ion-label>
+      <ion-input class="info" placeholder="{{student.phone}}"></ion-input>
+    </ion-item>
+    <ion-item class="row-item">
+      <ion-label class="title">Di động: </ion-label>
+      <ion-input class="info" placeholder="{{student.phone}}"></ion-input>
+    </ion-item>
+    <ion-item class="row-item">
+      <ion-label class="title">Địa chỉ: </ion-label>
+      <ion-input class="info" placeholder="{{student.address}}"></ion-input>
+    </ion-item>
+
+    <button ion-button  (click)="onUpdateClick()">
+      Update
+    </button>
+  </ion-list>
+</ion-content>
+

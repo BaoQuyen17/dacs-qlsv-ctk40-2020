@@ -1,0 +1,90 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title >Thông tin sinh viên</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content style='background-color:#02913f' >
+  <ion-list class ='ion' >
+      <link rel="icon" type="image/x-icon" href="assets/icon/favicon.ico">
+    <ion-item >
+      <ion-label class="title">Mã số sinh viên: </ion-label>
+      <ion-label class="info" >{{student.id}}</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label class="title">Họ tên:</ion-label>
+      <ion-label class="info" >{{student.fullname}}</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label class="title">Ngày sinh:</ion-label>
+      <ion-label class="info" >{{student.birth}}</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label class="title">Giới tính:</ion-label>
+      <ion-label class="info">{{student.sex}}</ion-label>
+
+    </ion-item>
+    <ion-item>
+      <ion-label class="title">Dân tộc:</ion-label>
+      <ion-label class="info">{{student.nations}}</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label class="title">Số CMND:</ion-label>
+      <ion-label class="info">{{student.CMND}}</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label class="title">Tôn giáo:</ion-label>
+      <ion-label class="info">{{student.religion}}</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label class="title">Đối tượng:</ion-label>
+      <ion-label class="info">{{student.object}}</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label class="title">Đoàn:</ion-label>
+      <!-- <ion-checkbox checked="true"></ion-checkbox> -->
+    </ion-item>
+    <ion-item>
+      <ion-label class="title">Ngày vào Đoàn:</ion-label>
+      <ion-label class="info" >{{student.DateDoan}}</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label class="title">Đảng:</ion-label>
+      <!-- <ion-checkbox checked="true"></ion-checkbox> -->
+    </ion-item>
+    <ion-item>
+      <ion-label class="title">Ngày vào Đảng:</ion-label>
+      <ion-label class="info" >{{student.DateDang}}"</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label class="title">Tình trạng học:</ion-label>
+      <ion-label>Còn học</ion-label>
+      <!-- <ion-radio value="" checked="true"></ion-radio> -->
+    </ion-item>
+    <ion-item>
+        <ion-label class="title">Quốc gia:</ion-label>
+        <ion-label class="info">Việt Nam</ion-label>
+      </ion-item>
+    <ion-item>
+      <ion-label class="title">Tỉnh/ Thành phố:</ion-label>
+      <ion-select class="info" [(ngModel)] = "city" placeholder = "{{student.city}}" interface="popover" (ionChange)="provinceChange($event)">
+          <ion-option *ngFor="let ci of cities" value="{{ci.name}}" >{{ci.name}}</ion-option>
+        </ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-label class="title">Quận/ Huyện:</ion-label>
+      <ion-select class="info" [(ngModel)] = "district" placeholder = "{{student.district}}" interface="popover">
+          <ion-option *ngFor="let di of districts" value="{{di.name}}" >{{di.name}}</ion-option>
+        </ion-select>
+    </ion-item>
+    
+    <ion-item>
+      <ion-label class="title">Địa chỉ thường trú:</ion-label>
+      <ion-label class="info" >{{student.address}}</ion-label>
+    </ion-item>
+
+  <button ion-button  (click)="onUpdateClick()">
+    Update
+  </button>
+  </ion-list>
+</ion-content>

@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Đăng nhập</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content  padding title="Login" id="page-login">
+  <form class='from' [formGroup]="myForm" (submit)="login()">
+    <div>
+      <img src="assets/imgs/Splash.jpg" style="display: block; width: 50%; height: auto; margin-left: auto; margin-right: auto;">
+    </div>
+    <div class="spacer"></div>
+    <ion-list>
+      <ion-item>
+        <label>
+          <span class="input-label">Mã số: </span>         
+        </label>
+        <input class='input' type="text" placeholder="" formControlName="username"  [(ngModel)] ="username"/>
+      </ion-item>
+      <ion-item>
+        <label >
+          <span class="input-label" >Mật khẩu: </span>         
+        </label>
+        <input class='input' type="password" placeholder=""  formControlName="password"  [(ngModel)] = "password"/>
+      </ion-item> 
+    </ion-list>
+    <button class ="button" (click) = "login()">Đăng nhập</button>
+    <div class="spacer"></div>
+  </form>
+</ion-content>
+

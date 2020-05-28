@@ -1,0 +1,101 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Cập nhật thông tin sinh viên</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-label>
+      Thông tin cá nhân
+    </ion-label>
+    <ion-item class="row-item">
+      <ion-label class="title">Mã số sinh viên: </ion-label>
+      <ion-input class="info">{{student.id}}</ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label class="title">Họ lót:</ion-label>
+      <ion-input class="info">{{student.name}}</ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label class="title">Tên:</ion-label>
+      <ion-input class="info" >{{student.fullname}}</ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label class="title">Ngày sinh:</ion-label>
+      <ion-input class="info">{{student.birth}}</ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label class="title">Nơi sinh:</ion-label>
+      <ion-input class="info" >{{student.birth}}</ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label class="title">Giới tính:</ion-label>
+      <ion-label class="info">{{student.sex}}</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label class="title">Dân tộc:</ion-label>
+      <ion-input class="info"> {{student.nations}}</ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label class="title">Tôn giáo:</ion-label>
+      <ion-input class="info">{{student.nations}}</ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label class="title">Mail:</ion-label>
+      <ion-input class="info">{{student.email}}</ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label class="title">Điện thoại:</ion-label>
+      <ion-input class="info"> {{student.phone}}</ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label class="title">Di động:</ion-label>
+      <ion-input class="info">{{student.phone}}</ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label class="title">CMND:</ion-label>
+      <ion-input class="info">>{{student.nations}}</ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label class="title">Ngày cấp:</ion-label>
+      <ion-input class="info" >{{student.nations}}</ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label class="title">Nơi cấp:</ion-label>
+      <ion-input class="info" >{{student.nations}}</ion-input>
+    </ion-item>
+    <ion-label>
+      Hộ khẩu thường trú
+    </ion-label>
+    <ion-item>
+      <ion-label class="title">Quốc gia:</ion-label>
+      <ion-label class="info">Viet Nam</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label class="title">Tỉnh/ Thành phố:</ion-label>
+      <ion-select class="info" [(ngModel)]="city" placeholder="{{student.city}}" interface="popover"
+        (ionChange)="provinceChange($event)">
+        <ion-option *ngFor="let ci of cities" value="{{ci.name}}">{{ci.name}}</ion-option>
+      </ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-label class="title">Quận/ Huyện:</ion-label>
+      <ion-select class="info" [(ngModel)]="district" placeholder="{{student.district}}" interface="popover">
+        <ion-option *ngFor="let di of districts" value="{{di.name}}">{{di.name}}</ion-option>
+      </ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-label class="title">Phường xã:</ion-label>
+      <ion-select class="info" [(ngModel)]="district" placeholder="{{student.district}}" interface="popover">
+        <ion-option *ngFor="let di of districts" value="{{di.name}}">{{di.name}}</ion-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-label class="title">Địa chỉ thường trú:</ion-label>
+      <ion-input class="info" placeholder="{{student.address}}"></ion-input>
+    </ion-item>
+  </ion-list>
+</ion-content>
