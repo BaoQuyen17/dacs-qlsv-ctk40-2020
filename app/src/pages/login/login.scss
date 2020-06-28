@@ -23,8 +23,9 @@ page-login {
         padding-bottom: 8px;
         border: solid 1px;
         width: 250px;
-        margin: 0 auto 5px auto;
+        margin: 0 auto;
         border-radius: 10px;
+        
     }
     .button{
         text-align: center;
@@ -39,6 +40,10 @@ page-login {
         padding-right:15px ;
         align-items: center;
         margin-right: 10px;
+        position: absolute;
+      
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
     }
     .spacer{
         width: 300px; 

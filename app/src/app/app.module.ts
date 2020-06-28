@@ -22,6 +22,7 @@ import { AngularFireAuth } from '@angular/fire/auth';
 import { StudentService } from '../providers/firebase/student-services';
 import { AngularFirestore } from 'angularfire2/firestore';
 import { StudentSingleton } from '../providers/student-singleton';
+import { AdminPage } from '../pages/admin/admin';
 
 
 const enviroment = {
@@ -46,7 +47,8 @@ const enviroment = {
     InfoKhPage,
     UpdateSvPage,
     UpdateNtPage,
-    HistoryPage
+    HistoryPage,
+    AdminPage
   ],
   imports: [
     BrowserModule,
@@ -67,7 +69,8 @@ const enviroment = {
     InfoKhPage,
     UpdateSvPage,
     UpdateNtPage,
-    HistoryPage
+    HistoryPage,
+    AdminPage
   ],
   providers: [
     StatusBar,

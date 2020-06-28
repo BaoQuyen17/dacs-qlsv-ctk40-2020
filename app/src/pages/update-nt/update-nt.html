@@ -6,22 +6,22 @@
 -->
 <ion-header>
   <ion-navbar>
-    <ion-title>Cập nhật thông tin liên lạc người thân của sinh viên</ion-title>
+    <ion-title>Update Contact of Family</ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content>
-  <ion-list>
+  <ion-list class ='ion' >
     <ion-label>
       Thông tin cha
     </ion-label>
     <ion-item class="row-item">
-      <ion-label class="title">Họ tên: </ion-label>
-      <ion-input class="info" ></ion-input>
+      <ion-label class="title">Họ tên:</ion-label>
+      <ion-input class="info" value = "{{father.fullname}}"></ion-input>
     </ion-item>
     <ion-item class="row-item">
       <ion-label class="title">Năm sinh: </ion-label>
-      <ion-input class="info"></ion-input>
+      <ion-input class="info" value = "{{father.year}}"></ion-input>
     </ion-item>
     <ion-item class="row-item">
       <ion-label class="title">Nghề nghiệp: </ion-label>
@@ -33,30 +33,33 @@
     </ion-label>
     <ion-item class="row-item">
       <ion-label class="title">Họ tên: </ion-label>
-      <ion-input class="info" ></ion-input>
+      <ion-input class="info" value ="{{mother.fullname}}"></ion-input>
     </ion-item>
     <ion-item class="row-item">
       <ion-label class="title">Năm sinh: </ion-label>
-      <ion-input class="info"></ion-input>
+      <ion-input class="info" value ="{{mother.year}}"></ion-input>
     </ion-item>
     <ion-item class="row-item">
       <ion-label class="title">Nghề nghiệp: </ion-label>
-      <ion-input class="info"></ion-input>
+      <ion-input class="info">{{mother.name}}</ion-input>
     </ion-item>
     <ion-label>
       Thông tin người liên hệ
     </ion-label>
     <ion-item class="row-item">
       <ion-label class="title">Họ tên: </ion-label>
-      <ion-input class="info"></ion-input>
+      <ion-input class="info" value ="{{contact.fullname}}"></ion-input>
     </ion-item>
     <ion-item class="row-item">
       <ion-label class="title">Điện thoại: </ion-label>
-      <ion-input class="info">{{student.phone}}</ion-input>
+      <ion-input class="info" value ="{{contact.phone}}"></ion-input>
     </ion-item>
     <ion-item class="row-item">
       <ion-label class="title">Địa chỉ: </ion-label>
-      <ion-input class="info">{{student.address}}</ion-input>
+      <ion-input class="info" value ="{{contact.address}}"></ion-input>
     </ion-item>
+    <button ion-button  (click)="onUpdateClick()">
+        Cập nhật thông tin
+      </button>
   </ion-list>
 </ion-content>

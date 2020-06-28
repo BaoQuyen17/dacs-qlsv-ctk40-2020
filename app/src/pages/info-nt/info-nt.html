@@ -7,27 +7,27 @@
 
  
 <ion-content>
-  <ion-list>
+  <ion-list  class ='ion'>
     <ion-item class="row-item">
       <ion-label class="title">Họ tên: </ion-label>
-      <ion-input class="info" placeholder="{{student.fullname}}"></ion-input>
+      <ion-label class="info">{{contact.fullname}}</ion-label>
     </ion-item>
 
     <ion-item class="row-item">
       <ion-label class="title">Điện thoại: </ion-label>
-      <ion-input class="info" placeholder="{{student.phone}}"></ion-input>
+      <ion-label class="info">{{contact.phone}}</ion-label>
     </ion-item>
     <ion-item class="row-item">
       <ion-label class="title">Di động: </ion-label>
-      <ion-input class="info" placeholder="{{student.phone}}"></ion-input>
+      <ion-label class="info"></ion-label>
     </ion-item>
     <ion-item class="row-item">
       <ion-label class="title">Địa chỉ: </ion-label>
-      <ion-input class="info" placeholder="{{student.address}}"></ion-input>
+      <ion-label class="info">{{contact.address}}</ion-label>
     </ion-item>
 
     <button ion-button  (click)="onUpdateClick()">
-      Update
+    Cập nhật thông tin
     </button>
   </ion-list>
 </ion-content>

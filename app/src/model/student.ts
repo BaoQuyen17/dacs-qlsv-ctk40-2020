@@ -7,9 +7,9 @@ import { Courses } from "./courses";
 @Injectable()
 export class Student{
     detail: Detail;
-    family: Family;
+    family: Family[];
     courses: Courses;
-    constructor(detail: Detail, family: Family, courses: Courses){
+    constructor(detail: Detail, family: Family[], courses: Courses){
         this.detail = detail;
         this.family = family;
         this.courses = courses;

@@ -37,7 +37,7 @@ page-info-sv {
       .ion ion-item{
         width: 100%;
         display: flex;
-        background-color: #cad459;
+        background-color: #bbe1fa;
         color: black;
         margin-top: 5px;
         margin-bottom: 5px;
@@ -54,4 +54,21 @@ page-info-sv {
           margin-top: 12px;
     
       }
+    .button{
+        text-align: center;
+        width: 90%;
+        margin: 0 auto;
+        border-radius: 10px;
+        background-color: #008CBA;
+        color: whitesmoke;
+        height: 40px;
+        font-size: 25px;
+        padding-left: 30px;
+        padding-right:15px ;
+        align-items: center;
+        margin-right: 10px;
+        position: absolute;
+      
+        
+    }
 }

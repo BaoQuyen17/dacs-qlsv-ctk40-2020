@@ -36,7 +36,8 @@ export class LoginPage {
     let uid = await this.authService.doLogin(email,this.password)
     console.log("uid");
     console.log(uid);
-     let student = await this.studentService.getStudentFromUID(uid);
+    this.dataSingletone.setuid(uid);
+     let student = await this.studentService.getStudentFromUID();
     if (student!=null) {
       this.dataSingletone.setStudent(student);
           this.navCtrl.setRoot(HomePage, student);

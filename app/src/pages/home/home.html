@@ -1,11 +1,13 @@
-
 <ion-content padding>
-  <ion-tabs selectedIndex=selectedIndex >
-    <ion-tab [root]="ttsv" tabTitle="Thông tin sinh viên" tabIcon="person"></ion-tab>
-    <ion-tab [root]="ttll" tabTitle="Thông tin liên lạc" tabIcon="contact"></ion-tab>
-    <ion-tab [root]="ttnt" tabTitle="Thông tin người thân" tabIcon="people"></ion-tab>
-    <ion-tab [root]="ttkh" tabTitle="Thông tin khóa học" tabIcon="time"></ion-tab>
-    <ion-tab [root]="ls" tabTitle="Xem lịch sử" tabIcon="time"></ion-tab>
+
+  <ion-tabs selectedIndex=selectedIndex  >
+    <ion-tab [root]="detail" tabTitle="Detail" tabIcon="person"></ion-tab>
+    <ion-tab *ngIf="isStudent" [root]="contact" tabTitle="Contact" tabIcon="contact"></ion-tab>
+    <ion-tab *ngIf="isStudent" [root]="family" tabTitle="Family" tabIcon="people"></ion-tab>
+    <ion-tab *ngIf="isStudent" [root]="course" tabTitle="Course" tabIcon="time"></ion-tab>
+    <ion-tab *ngIf="isStudent" [root]="history" tabTitle="History" tabIcon="time"></ion-tab>
+    <ion-tab *ngIf="!isStudent" [root]="admin" tabTitle="Admin" tabIcon="contact"></ion-tab>
   </ion-tabs>
+
 
 </ion-content>

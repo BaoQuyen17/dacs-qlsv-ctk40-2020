@@ -1,3 +1,75 @@
 page-info-nt {
-
-}
+        align-content: center;
+        ion-content{
+            background-color: #b1b1b1;
+        }
+    
+        .row-item{
+            
+            //background-color: #d4f3ef;
+            width: 100%;
+            display: flex;
+            background-color: #b1b1b1;
+            color: white;
+    
+        }
+    
+        .row-item .title{
+            
+            //background-color: #d4f3ef;
+            width: 40%;
+            float: left;
+            color: white;
+        }
+        .row-item .info{
+            //background-color: #d4f3ef;
+            width: 60%;
+            float: right;
+            color: black;
+    
+        }
+        .ion {
+           // background-color: #d4f3ef;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: medium;
+            font-weight: bold;
+          }
+          .ion ion-item{
+            width: 100%;
+            display: flex;
+            background-color: #bbe1fa;
+            color: black;
+            margin-top: 5px;
+            margin-bottom: 5px;
+          }
+    
+          .main-button{
+              display: block;
+              width: 100%;
+              height: 32px;
+              align-content: center;
+              text-align: center;
+              background-color: red;
+              margin: auto 0px;
+              margin-top: 12px;
+        
+          }
+        .button{
+            text-align: center;
+            width: 90%;
+            margin: 0 auto;
+            border-radius: 10px;
+            background-color: #008CBA;
+            color: whitesmoke;
+            height: 40px;
+            font-size: 25px;
+            padding-left: 30px;
+            padding-right:15px ;
+            align-items: center;
+            margin-right: 10px;
+            position: absolute;
+          
+            
+        }
+    }
+    

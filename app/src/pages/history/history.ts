@@ -1,12 +1,9 @@
-import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { Component,ViewChild } from '@angular/core';
+import { IonicPage, NavController, NavParams,Refresher } from 'ionic-angular';
+import { StudentService } from '../../providers/firebase/student-services';
+import { HistoryDetail } from '../../model/history';
+import { StudentSingleton } from '../../providers/student-singleton';
 
-/**
- * Generated class for the HistoryPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
 
 @IonicPage()
 @Component({
@@ -15,11 +12,43 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class HistoryPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  @ViewChild("refreshRef") refreshRef: Refresher;
+  history: HistoryDetail[]
+
+  constructor(public navCtrl: NavController, public navParams: NavParams, public studentService: StudentService, public dataStore: StudentSingleton) {
+    
+
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad HistoryPage');
+  async ionViewDidLoad() {
+    await this.onfreshing();
   }
+
+  async onfreshing(){
+    this.history = await this.studentService.getDetailOfHistory();
+     console.log("history of ts ")
+     console.log(this.history)
+  }
+
+   itemClick(item: HistoryDetail){
+     let detail = this.dataStore.student.detail.clone()
+    this.studentService.addDetailIntoHistory(
+     new HistoryDetail(
+     detail,
+      new Date().toString()
+     )
+    );
+    
+    this.studentService.updateDetail(item.getDetailNewInstance())
+  }
+  async doRefresh(event:Refresher){
+
+    setTimeout( async() => {
+      await this.onfreshing()
+      event.complete();
+ 
+    }, 2000);
+
+}
 
 }
